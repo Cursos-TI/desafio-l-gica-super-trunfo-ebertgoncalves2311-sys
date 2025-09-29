@@ -88,8 +88,8 @@ printf("Populaçao: %d\n",  populacao1);
 printf("Área: %.f\n",  area1);
 printf("Pib: %.f\n",  pib1);
 printf("Pontos turísticos: %d\n",  pontos_turisticos1);
-printf("A densidade é: %f, densidade1");
-printf("O pib percapita é: %f, pibpercapta1")
+printf("A densidade é: %.2f\n", densidade1);
+printf("O pib percapita é: %.2f\n", pibpercapta1);
 
 //Exibindo informacoes da segunda carta
 
@@ -101,16 +101,23 @@ printf("Populaçao: %i\n",  populacao2);
 printf("Área: %.f\n",  area2);
 printf("Pib: %.f\n",  pib2);
 printf("Pontos turísticos: %d\n",  pontos_turisticos2);
-printf("A densidade é: %f, densidade2");
-printf("O pib percapita é: %f, pibpercapta2")
+printf("A densidade é: %.2f\n", densidade2);
+printf("O pib percapita é: %.2f\n", pibpercapta2);
 
-//Iniciando comparação
+//Iniciando comparação de população e definindo carta vencedora
+
+printf("== COMPARAÇÃO DE POPULAÇÃO ==\n");
+
+
 if (populacao1 > populacao2)
      {
-    printf("Cidade 1 tem maior população.\n");
+    printf("Carta 1 - %s tem maior população:  %d\n", nome_cidade1, populacao1);
+    printf("Carta 1 - %s é a vencedora!\n", nome_cidade1);
      } else {
-    printf("Cidade 2 tem maior população.\n");
-     }
+    printf("Carta 2 - %s tem maior população: %d\n", nome_cidade2, populacao2);
+    printf("Carta 2 - %s é a vencedora!\n", nome_cidade2);
+   }
+
 
     return 0;
 }
