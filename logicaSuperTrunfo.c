@@ -25,7 +25,7 @@ printf("== CADASTRO DE PRIMEIRA CARTA ==\n  ");
 printf("Digite o estado(A-H): ");
 scanf("%s",  estado1);
 
-printf("Digie o codigo da carta (ex A01): ");
+printf("Digite o codigo da carta (ex A01): ");
 scanf("%s",   codigocarta1);
 
 printf("Digite o nome da cidade: ");
@@ -70,13 +70,13 @@ scanf("%d",   &pontos_turisticos2);
 
 //Calculando densidade e pib percapita da cidade 1:
 
-densidade1 = populacao1 / area1;
-pibpercapta1 = pib1 / populacao1;
+densidade1 = (float)populacao1 / area1;
+pibpercapta1 = (float)pib1 / populacao1;
 
 //Calculando densidade e pib percapita da cidade 2:
 
-densidade2 = populacao2 / area2; 
-pibpercapta2 = pib2 / populacao2;
+densidade2 = (float)populacao2 / area2; 
+pibpercapta2 = (float)pib2 / populacao2;
 
 //Exibindo informacoes da primeira carta
 
@@ -107,17 +107,17 @@ printf("O pib percapita é: %.2f\n", pibpercapta2);
 //Iniciando comparação de população e definindo carta vencedora
 
 printf("== COMPARAÇÃO DE POPULAÇÃO ==\n");
-
+printf("Carta 1 - %s, População: %d\n", nome_cidade1, populacao1);
+printf("Carta 2 - %s, População: %d\n", nome_cidade2, populacao2);
 
 if (populacao1 > populacao2)
-     {
-    printf("Carta 1 - %s tem maior população:  %d\n", nome_cidade1, populacao1);
-    printf("Carta 1 - %s é a vencedora!\n", nome_cidade1);
-     } else {
-    printf("Carta 2 - %s tem maior população: %d\n", nome_cidade2, populacao2);
-    printf("Carta 2 - %s é a vencedora!\n", nome_cidade2);
+      {
+    printf("Carta 1 - %s tem maior população e é vencedora!\n", nome_cidade1);
+      } else if (populacao2 > populacao1) {
+    printf("Carta 2 - %s  tem maior população e é vencedora!\n", nome_cidade2);
+   } else {
+    printf("As duas cartas tem a mesma população!\n");
    }
-
 
     return 0;
 }
